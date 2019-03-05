@@ -1,5 +1,32 @@
-body {
-  
+.row1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.userDiv{
+  text-align: center;
+  position: relative;
+  font-size: 15px;
+  width: 200px;
+  padding: 20px;
+  text-align: left;
+  height: 500px;
+  border: solid;
+  border-width: thin;
+  border-radius: 10px;
+  white-space: normal;
+  overflow: auto;
+}
+
+.jumbotron{
+  height: 400px;
+}
+
+.btn{
+  height: 50px;
+  position: relative;
+  grid-row: auto
 }
 
 img {
