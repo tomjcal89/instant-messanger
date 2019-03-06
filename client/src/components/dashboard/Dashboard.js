@@ -13,6 +13,8 @@ class Dashboard extends Component {
     this.props.deleteAccount();
   }
 
+  
+
   render() {
     const { user, loading } = this.props.auth;
     // const { profile, loading } = this.props.profile;

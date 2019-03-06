@@ -12,6 +12,8 @@ class Navbar extends Component {
     this.props.logoutUser();
   }
 
+
+
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
@@ -35,6 +37,8 @@ class Navbar extends Component {
         </li>
       </ul>
     );
+
+    
 
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
