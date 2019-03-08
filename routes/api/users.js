@@ -87,7 +87,7 @@ router.post('/login', (req, res) => {
     bcrypt.compare(password, user.password).then(isMatch => {
       if (isMatch) {
         // User Matched
-        const payload = { id: user.id, name: user.name, avatar: user.avatar }; // Create JWT Payload
+        const payload = { id: user.id, name: user.name, username: user.username, avatar: user.avatar }; // Create JWT Payload
 
         // Sign Token
         jwt.sign(
@@ -107,6 +107,24 @@ router.post('/login', (req, res) => {
       }
     });
   });
+});
+
+
+
+router.get('/all', (req, res) => {
+  const errors = {};
+
+  User.find()
+    .populate('user', ['name', 'avatar'])
+    .then(users => {
+      if (!users) {
+        errors.noprofile = 'There are no users';
+        return res.status(404).json(errors);
+      }
+
+      res.json(users);
+    })
+    .catch(err => res.status(404).json({ profile: 'There are no users' }));
 });
 
 // @route   GET api/users/current
