@@ -15,7 +15,7 @@ import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import Dashboard from './components/dashboard/Dashboard';
+import Dashboard from './components/dashboard/Username';
 import NotFound from './components/not-found/NotFound';
 
 import './App.css';
